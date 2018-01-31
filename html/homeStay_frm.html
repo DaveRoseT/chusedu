@@ -1,0 +1,427 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <title>寄宿家庭</title>
+    <link rel="stylesheet" type="text/css" href="../css/aui.css" />
+    <link rel="stylesheet" type="text/css" href="../css/csd.css" />
+    <link rel="stylesheet" type="text/css" href="../css/swiper.min.css" />
+    <style media="screen">
+      .aui-searchbar{
+        height: auto;
+      }
+      .aui-searchbar-input{
+        margin: 0;
+        height: 1.45rem;
+        line-height: 1.45rem;
+        padding-left: .325rem;
+        border-radius: 0;
+      }
+      .aui-searchbar-input input{
+        height: 1.45rem;
+        width: 100%;
+        font-size: .5rem;
+        color: #999;
+      }
+      .aui-searchbar .aui-iconfont{
+        font-size: .55rem;
+      }
+      .aui-card-list-footer{
+        display: block;
+        padding: .25rem;
+      }
+      .aui-card-list{
+        margin: 0;
+      }
+      .swiper-slide{
+        background: #fff;
+      }
+      .aui-card-list:active{
+        background-color: #efefef;
+      }
+      .aui-list{
+
+        background-image: linear-gradient(0,#fff,#fff 50%,transparent 50%);
+      }
+      .aui-list .aui-list-item{
+        background-image: linear-gradient(0,#fff,#fff 50%,transparent 50%);
+        padding-left: 0;
+      }
+      .aui-list .aui-list-item-media img{
+        width: 3.05rem;
+        height: 3.05rem;
+        margin: 0 auto;
+      }
+      .aui-list .aui-list-item-text .aui-list-item-title{
+        font-size: .6rem;
+      }
+      .aui-list .aui-list-item-text .aui-list-item-title span{
+        font-size: .45rem;
+        color: #999;
+        margin-left: .45rem;
+      }
+      .aui-list .aui-list-item-text.aui-ellipsis-3{
+        font-size: .45rem;
+        line-height: normal;
+      }
+      .aui-list .aui-list-item:active{
+        background-color: #efefef;
+      }
+      .case-posi-h3{
+        padding: 0;
+      }
+      .aui-popup-content .aui-list .aui-list-item-inner{
+        height: 1.45rem;
+      }
+      .aui-bar-nav{
+        background:#999;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1000;
+        min-height: auto;
+        height:auto;
+        opacity: 0;
+        height: 1rem;
+      }
+    </style>
+</head>
+<body>
+  <!-- 沉浸式状态栏 -->
+  <header class="aui-bar aui-bar-nav" id="aui-header"></header>
+  <!-- 首页背景层 -->
+  <div class="header-bg">
+    <div class="header-ser">
+      <h1>
+        寄宿家庭服务
+      </h1>
+      <p>
+        通过严格的犯罪记录筛查、家庭背景调查、周边环境
+走访等审核程序，为您的孩子精选学区内安全、
+舒适的高素质寄宿家庭。
+      </p>
+    </div>
+    <div class="header-search">
+      <div class="header-list"  aui-popup-for="top-left">
+        <span class="" id="list-text">寄宿家庭</span>
+          <div class="aui-popup aui-popup-top-left" id="top-left">
+          <div class="aui-popup-arrow"></div>
+          <div class="aui-popup-content" aui-popup-for="top-left">
+              <ul class="aui-list aui-list-noborder" id="ulDown">
+                  <li class="aui-list-item">
+                      <div class="aui-list-item-inner" id="c1">
+                          寄宿家庭
+                      </div>
+                  </li>
+                  <li class="aui-list-item">
+                      <div class="aui-list-item-inner" id="c2">
+                          托管计划
+                      </div>
+                  </li>
+                  <li class="aui-list-item">
+                      <div class="aui-list-item-inner" id="c3">
+                          我的收藏
+                      </div>
+                  </li>
+              </ul>
+          </div>
+        </div>
+        <b></b>
+      </div>
+      <div class="header-form">
+          <div class="aui-searchbar" id="search">
+              <div class="aui-searchbar-input aui-border-radius" tapmode="">
+                  <i class="aui-iconfont aui-icon-search"></i>
+                  <form action="">
+                      <input type="search" placeholder="请输入城市街道或房型…" id="search-input">
+                  </form>
+              </div>
+          </div>
+      </div>
+    </div>
+  </div>
+  <!-- body -->
+  <div class="aui-content" style="padding:1rem .75rem .7rem .75rem;">
+    <div class="aui-row" style="padding-bottom:.3rem;">
+      <div class="aui-col-5">
+        <div class="btn-text aui-btn" style="margin-right:.2rem;">
+          <i class="iImg-1"></i>发布寄宿家庭
+        </div>
+      </div>
+      <div class="aui-col-5">
+        <div class="btn-text aui-btn" style="margin-left:.2rem;">
+          <i class="iImg-2"></i>发布寄宿需求
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- 最新 -->
+  <div class="aui-content">
+    <div class="case case-no-pad-r" style="background-color:#f8fafc;">
+      <div class="case-bt case-pad-r-75">
+        <h1>最新/<span>寄宿家庭</span><i class="aui-iconfont aui-icon-right aui-pull-right tapmode"></i></h1>
+      </div>
+      <div class="case-body" style="padding-top:.45rem;">
+          <div class="swiper-container">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <i class="ckxq">查看详情</i>
+                <div class="aui-card-list">
+                    <div class="aui-card-list-content">
+                        <img src="../image/case.png" />
+                    </div>
+                    <div class="aui-card-list-footer case-h3">
+                        <h3 class="aui-ellipsis-1">Chicago 附近的公寓附近的公寓附近的公寓</h3>
+                        <p class="aui-ellipsis-1">Chicago</p>
+                        <span>$1.140-$1.440</span>
+                    </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="aui-card-list">
+                    <div class="aui-card-list-content">
+                        <img src="../image/case.png" />
+                    </div>
+                    <div class="aui-card-list-footer case-h3">
+                        <h3 class="aui-ellipsis-1">Chicago 附近的公寓附近的公寓附近的公寓</h3>
+                        <p class="aui-ellipsis-1">Chicago</p>
+                        <span>$1.140-$1.440</span>
+                    </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="aui-card-list">
+                    <div class="aui-card-list-content">
+                        <img src="../image/case.png" />
+                    </div>
+                    <div class="aui-card-list-footer case-h3">
+                        <h3 class="aui-ellipsis-1">Chicago 附近的公寓附近的公寓附近的公寓</h3>
+                        <p class="aui-ellipsis-1">Chicago</p>
+                        <span>$1.140-$1.440</span>
+                    </div>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+    <!-- 优质 -->
+    <div class="case case-no-pad-r" style="background-color:#f8fafc;padding-bottom:.75rem;">
+      <div class="case-bt case-pad-r-75">
+        <h1>优质/<span>寄宿家庭</span><i class="aui-iconfont aui-icon-right aui-pull-right tapmode"></i></h1>
+      </div>
+      <div class="case-body" style="padding-top:.45rem;">
+          <div class="swiper-container">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <i class="ckxq">查看详情</i>
+                <div class="aui-card-list">
+                    <div class="aui-card-list-content">
+                        <img src="../image/case.png" />
+                    </div>
+                    <div class="aui-card-list-footer case-h3">
+                        <h3 class="aui-ellipsis-1">Chicago 附近的公寓附近的公寓附近的公寓</h3>
+                        <p class="aui-ellipsis-1">Chicago</p>
+                        <span>$1.140-$1.440</span>
+                    </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="aui-card-list">
+                    <div class="aui-card-list-content">
+                        <img src="../image/case.png" />
+                    </div>
+                    <div class="aui-card-list-footer case-h3">
+                        <h3 class="aui-ellipsis-1">Chicago 附近的公寓附近的公寓附近的公寓</h3>
+                        <p class="aui-ellipsis-1">Chicago</p>
+                        <span>$1.140-$1.440</span>
+                    </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="aui-card-list">
+                    <div class="aui-card-list-content">
+                        <img src="../image/case.png" />
+                    </div>
+                    <div class="aui-card-list-footer case-h3">
+                        <h3 class="aui-ellipsis-1">Chicago 附近的公寓附近的公寓附近的公寓</h3>
+                        <p class="aui-ellipsis-1">Chicago</p>
+                        <span>$1.140-$1.440</span>
+                    </div>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+    <!-- 美好 -->
+    <div class="case case-box" style="padding: .5rem .75rem .5rem .75rem;background-color:#fff;">
+      <div class="case-bt" style="padding-right:0;margin-bottom:.3rem;">
+        <h1>美好/<span>寄宿生活</span><i class="aui-iconfont aui-icon-right aui-pull-right tapmode"></i></h1>
+      </div>
+      <div class="aui-card-list-content">
+        <ul class="aui-list aui-media-list">
+          <li class="aui-list-item aui-list-item-middle">
+                <div class="aui-media-list-item-inner">
+                    <div class="aui-list-item-media">
+                        <img src="../image/adr.png" class="aui-img-round">
+                    </div>
+                    <div class="aui-list-item-inner">
+                        <div class="aui-list-item-text">
+                            <div class="aui-list-item-title">
+                              于文龙<span>学生</span>
+                            </div>
+                        </div>
+                        <div class="aui-list-item-text aui-ellipsis-3">
+                            初中时就打算以后一定要出国深造，由于中考的原因，我不得不把自己的计划提前了。于是，我下定了决心对自己说我要出国。任何事情都是说的容易做的难…
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+      </div>
+    </div>
+    <!-- 热门城市 -->
+    <div class="case case-no-pad-r" style="padding-bottom:1.25rem; background-color:#f8fafc;">
+      <div class="case-bt case-pad-r-75">
+        <h1>热门/<span>城市</span><i class="aui-iconfont aui-icon-right aui-pull-right tapmode"></i></h1>
+      </div>
+      <div class="case-body" style="padding-top:.45rem;">
+          <div class="swiper-container">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <i class="ckxq">查看详情</i>
+                <div class="aui-card-list">
+                    <div class="aui-card-list-content">
+                        <img src="../image/case.png" />
+                    </div>
+                    <div class="aui-card-list-footer case-posi-h3">
+                        <h3 class="aui-text-center aui-ellipsis-1">Chicago 附近的公寓附近的公寓附近的公寓</h3>
+                    </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="aui-card-list">
+                    <div class="aui-card-list-content">
+                        <img src="../image/case.png" />
+                    </div>
+                    <div class="aui-card-list-footer case-posi-h3">
+                        <h3 class="aui-text-center aui-ellipsis-1">Chicago 附近的公寓附近的公寓附近的公寓</h3>
+
+                    </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="aui-card-list">
+                    <div class="aui-card-list-content">
+                        <img src="../image/case.png" />
+                    </div>
+                    <div class="aui-card-list-footer case-posi-h3">
+                        <h3 class="aui-text-center aui-ellipsis-1">Chicago 附近的公寓附近的公寓附近的公寓</h3>
+                    </div>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+    <div class="case case-no-pad-r">
+      <div class="case-bt case-pad-r-75">
+        <h1>热门/<span>学校</span><i class="aui-iconfont aui-icon-right aui-pull-right tapmode"></i></h1>
+      </div>
+      <div class="case-body" style="padding-top:.45rem;">
+              <div class="swiper-container">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <b></b>
+                    <div class="aui-card-list">
+                        <div class="aui-card-list-content">
+                            <img src="../image/case.png" />
+                        </div>
+                        <div class="aui-card-list-footer case-h3 case-h3-d">
+                            <h3 class="aui-ellipsis-1">Chicago 附近的公寓附近的公寓附近的公寓</h3>
+                        </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="aui-card-list">
+                        <div class="aui-card-list-content">
+                            <img src="../image/case.png" />
+                        </div>
+                        <div class="aui-card-list-footer case-h3 case-h3-d">
+                            <h3 class="aui-ellipsis-1">Chicago 附近的公寓附近的公寓附近的公寓</h3>
+                        </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="aui-card-list">
+                        <div class="aui-card-list-content">
+                            <img src="../image/case.png" />
+                        </div>
+                        <div class="aui-card-list-footer case-h3 case-h3-d">
+                            <h3 class="aui-ellipsis-1">Chicago 附近的公寓附近的公寓附近的公寓</h3>
+                        </div>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+          </div>
+    </div>
+  </div>
+  <div class="textLine"></div>
+</body>
+<script type="text/javascript" src="../script/api.js"></script>
+<script type="text/javascript" src="../script/aui-popup.js"></script>
+<script type="text/javascript" src="../script/jquery.min.js"></script>
+<script type="text/javascript" src="../script/swiper.min.js"></script>
+<script type="text/javascript">
+    apiready = function(){
+        api.parseTapmode();
+    };
+    var popup = new auiPopup();
+    //搜索分类选择
+    var listText = $api.byId('list-text');
+    var ulDown = $api.byId('ulDown');
+    //时间代理
+    $api.addEvt(ulDown, 'click', function(ev){
+    　　　 var target = ev.target;
+          //给span绑定data-id
+          $api.attr(listText,'data-id',target.id);
+          //更换span innerHTML
+          $api.html(listText,$api.html(target));
+    });
+    var swiper1 = new Swiper('.swiper-container', {
+         slidesPerView: 2.5,
+         spaceBetween: 8,
+       });
+
+    function closeWin(){
+        api.closeWin({
+        });
+    }
+    //沉浸式状态栏
+    window.addEventListener('scroll', function () {
+    var header = $api.byId('aui-header');//获取到导航栏id
+       if(getScrollTop() > header.offsetHeight){
+          $api.css(header,'opacity:.7');
+
+       }
+       else{//当滚动距离小于250的时候执行下面的内容，也就是让导航栏恢复原状
+          $api.css(header,'opacity:0');
+      }
+    })
+    //滚动条距顶部距离
+    function getScrollTop(){
+      var scrollTop=0;
+      if(document.documentElement&&document.documentElement.scrollTop){
+          scrollTop=document.documentElement.scrollTop;
+      }else if(document.body){
+          scrollTop=document.body.scrollTop;
+      }
+      return scrollTop;
+    }
+</script>
+</html>

@@ -1,0 +1,303 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <title>假期托管搜索</title>
+    <link rel="stylesheet" type="text/css" href="../css/aui.css" />
+    <link rel="stylesheet" type="text/css" href="../css/csd.css" />
+    <style media="screen">
+      body{
+        background-color: #f6f6f6;
+      }
+      .aui-card-list-footer{
+        display: block;
+        padding: .2rem .4rem;
+      }
+      .aui-card-list-content img{
+        width: 100%;
+        height:5.55rem;
+      }
+      input[type="number"]{
+        height: .925rem;
+        width: 5.75rem;
+        background-color: #fff;
+        text-align: center;
+        font-size: .375rem;
+        color: #999999
+      }
+      input[type="date"]{
+        height: .925rem;
+        line-height: .925rem;
+        width: 5.75rem;
+        background-color: #fff;
+        text-align: center;
+        font-size: .375rem;
+        color: #999999
+      }
+      .aui-col-xs-3{
+        width: 23%;
+      }
+      @media screen and (max-width: 320px) {
+        .aui-col-xs-3{
+          width: 22%;
+          padding: 0;
+        }
+      }
+    </style>
+</head>
+<body>
+  <div class="aui-content">
+    <div class="aui-row ship-res">
+      <div class="aui-col-xs-10" id="set-top">
+        <div class="aui-col-xs-4" id="" tapmode>
+          推荐排序<i></i>
+        </div>
+        <div class="aui-col-xs-4" tapmode>
+          最新发布<i></i>
+        </div>
+        <div class="aui-col-xs-4" tapmode>
+          价格排序<i></i>
+        </div>
+      </div>
+      <div class="aui-col-xs-2 ship-sort" id="markMbBtn" tapmode>
+        筛选<b></b>
+      </div>
+    </div>
+  </div>
+  <div class="aui-content">
+    <div class="aui-row aui-ship-list">
+      <div class="aui-col-5">
+        <div class="aui-card-list">
+          <div class="aui-card-list-content">
+              <i>假期住宿</i>
+              <img src="../image/case.png">
+          </div>
+          <div class="aui-card-list-footer case-h3">
+              <h3 class="aui-ellipsis-1">Chicago 附近的公寓附近的公寓附近的公寓</h3>
+              <p class="aui-ellipsis-1">Chicago</p>
+              <span>$1.140-$1.440</span>
+          </div>
+        </div>
+      </div>
+      <div class="aui-col-5">
+        <div class="aui-card-list">
+          <div class="aui-card-list-content">
+              <b>假期游玩</b>
+              <img src="../image/case.png">
+          </div>
+          <div class="aui-card-list-footer case-h3">
+              <h3 class="aui-ellipsis-1">美国东海岸9日游美国东海岸9日游美国东海岸9日游</h3>
+              <p class="aui-ellipsis-1">加州小镇，三大公园，羚羊加州小镇，三大公园，羚羊</p>
+              <span>$250.0</span>
+          </div>
+        </div>
+      </div>
+      <div class="aui-col-5">
+        <div class="aui-card-list">
+          <div class="aui-card-list-content">
+              <i>假期住宿</i>
+              <img src="../image/case.png">
+          </div>
+          <div class="aui-card-list-footer case-h3">
+              <h3 class="aui-ellipsis-1">Chicago 附近的公寓附近的公寓附近的公寓</h3>
+              <p class="aui-ellipsis-1">Chicago</p>
+              <span>$1.140-$1.440</span>
+          </div>
+        </div>
+      </div>
+      <div class="aui-col-5">
+        <div class="aui-card-list">
+          <div class="aui-card-list-content">
+              <b>假期游玩</b>
+              <img src="../image/case.png">
+          </div>
+          <div class="aui-card-list-footer case-h3">
+              <h3 class="aui-ellipsis-1">Chicago 附近的公寓附近的公寓附近的公寓</h3>
+              <p class="aui-ellipsis-1">Chicago</p>
+              <span>$1.140-$1.440</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="markMb" id="markMb">
+
+  </div>
+  <div class="markMb-layout" id="layout">
+    <div class="asd">
+    <div class="layout-bt">
+      <h1>托管类型 <i class="aui-iconfont aui-icon-down aui-pull-right"></i></h1>
+    </div>
+    <div class="layout-btns layout-btn borderB layout-pm-b-75">
+      <div class="aui-row">
+        <div class="aui-btn active aui-col-xs-3" tapmode>假期托管</div>
+        <div class="aui-btn aui-col-xs-3" tapmode>假期游玩</div>
+      </div>
+    </div>
+    <div class="layout-bt">
+      <h1>费用范围</h1>
+    </div>
+    <div class="layout-price borderB layout-pm-b-75">
+      <div class="aui-row">
+        <div class="aui-btn aui-col-xs-3 active">0-500</div>
+        <div class="aui-btn aui-col-xs-3">500-1000</div>
+        <div class="aui-btn aui-col-xs-3">1000-1500</div>
+        <div class="aui-btn aui-col-xs-3">1500+</div>
+      </div>
+      <div class="price-box">
+        <input type="number" id="startNum" placeholder="US$"> <span>-</span> <input type="number" id="endNum" placeholder="US$">
+      </div>
+    </div>
+    <div class="layout-bt">
+      <h1>托管时间</h1>
+    </div>
+    <div class="layout-date borderB layout-pm-b-75">
+      <div class="price-box">
+          <input type="date" placeholder="入住时间" id="startTime"> <span>-</span> <input disabled="true" type="date" placeholder="搬出日期" id="endTime">
+      </div>
+    </div>
+
+    <div class="layout-bt">
+      <h1>配套设施</h1>
+    </div>
+    <div class="layout-btns layout-btns layout-btn borderB layout-pm-b-75">
+      <div class="aui-row">
+        <div class="aui-btn active aui-col-xs-3" tapmode>健身房</div>
+        <div class="aui-btn aui-col-xs-3" tapmode>学习室</div>
+        <div class="aui-btn aui-col-xs-3" tapmode>游泳池</div>
+        <div class="aui-btn aui-col-xs-3" tapmode>门禁系统</div>
+        <div class="aui-btn aui-col-xs-3" tapmode>娱乐中心</div>
+        <div class="aui-btn aui-col-xs-3" tapmode>医疗设施</div>
+      </div>
+    </div>
+    <div class="layout-btns layout-btns layout-btn">
+      <div class="aui-row">
+        <div class="aui-btn active aui-col-xs-3" tapmode>健身房</div>
+        <div class="aui-btn aui-col-xs-3" tapmode>学习室</div>
+        <div class="aui-btn aui-col-xs-3" tapmode>游泳池</div>
+        <div class="aui-btn aui-col-xs-3" tapmode>门禁系统</div>
+        <div class="aui-btn aui-col-xs-3" tapmode>娱乐中心</div>
+        <div class="aui-btn aui-col-xs-3" tapmode>医疗设施</div>
+      </div>
+    </div>
+      </div>
+    <div class="btnFix" id="btnFix">
+      <a>重置</a>
+      <a>完成</a>
+    </div>
+  </div>
+</body>
+<script type="text/javascript" src="../script/api.js"></script>
+<script type="text/javascript" src="../script/jquery.min.js"></script>
+<script type="text/javascript">
+    apiready = function(){
+        api.parseTapmode();
+    };
+    function closeWin(){
+        api.closeWin({
+        });
+    }
+    //给筛选加状态active
+    var setTop =$api.byId('set-top');
+    var divS = $api.domAll(setTop, 'div');
+    $api.addEvt(setTop, 'click', function(e){
+      
+      var target = e.target;
+      $api.addCls(target, 'active');
+      for(var i = 0; i < divS.length; i++){
+          if(target != divS[i]){
+            $api.removeCls(divS[i], 'active');
+          }
+      }
+    });
+    //筛选
+    var markMbBtn = $("#markMbBtn");
+    var markMb = $("#markMb");
+    var layout = $("#layout");
+    var layoutPrice = $(".layout-price")[0];
+    var layoutPriceDivs = $(".layout-price .aui-row>div");
+    //num
+    var startNum = $api.byId('startNum');
+    var endNum = $api.byId('endNum');
+    $api.addEvt(layoutPrice, 'click', function(e){
+      $api.val(startNum,'');
+      $api.val(endNum,'');
+      var target = e.target;
+      $api.toggleCls(target, 'active');
+      for(var i = 0; i < layoutPriceDivs.length; i++){
+          if(target != layoutPriceDivs[i]){
+            $api.removeCls(layoutPriceDivs[i], 'active');
+          }
+      }
+    });
+    markMbBtn.click(function(){
+      markMb.show();
+      setTimeout(function(){
+          layout.animate({right:0},200);
+
+      },300);
+
+    });
+    markMb.click(function(){
+      layout.animate({"right":"-80%"},300,function(){
+        setTimeout(function(){
+              markMb.hide();
+          },200);
+      });
+    });
+    //状态添加
+    var layoutBtn = document.querySelectorAll('.layout-btns');
+    for (var i = 0; i < layoutBtn.length; i++) {
+      btnSnum(layoutBtn[i])
+    }
+    function btnSnum(btn){
+      $api.addEvt(btn, 'click', function(e){
+        var target = e.target;
+        $api.toggleCls(target, 'active');
+      });
+    }
+    //键盘事件
+    var wHeight = window.innerHeight;
+    $(window).resize(function() {
+      var hh = window.innerHeight;
+      var viewTop = $(window).scrollTop();
+      var btnFix = $api.byId('btnFix');
+      if(wHeight > hh){
+        $api.css(btnFix,'position: static');
+      }else{
+        $api.css(btnFix,'position: absolute;bottom: 0;width: 100%;display: -webkit-flex;display: flex;');
+      }
+      wHeight = hh;
+    });
+
+    //判断时间
+    var startTime = $api.byId('startTime');
+    var endTime = $api.byId('endTime');
+    $api.addEvt(startTime, 'blur', function(){
+      var newDate = new Date();
+      var startDateV = new Date(Date.parse($api.val(startTime)));
+      var endDateV =  new Date(Date.parse($api.val(endTime)))
+      if($api.val(startTime)==""){
+        alert("请选择入住日期");
+      }else if (newDate > startDateV) {
+          alert("请选择正确日期");
+          $api.val(startTime,'');
+          endTime.disabled = true;
+      }else{
+        endTime.disabled = false;
+      }
+   });
+    $api.addEvt(endTime, 'blur', function(){
+      var newDate = new Date();
+      var startDateV = new Date(Date.parse($api.val(startTime)));
+      var endDateV =  new Date(Date.parse($api.val(endTime)))
+      if(newDate > endDateV){
+        alert("请选择正确日期")
+        $api.val(endTime,'');
+      }
+    });
+
+</script>
+</html>

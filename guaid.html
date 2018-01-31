@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+  <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+  <meta charset="utf-8">
+  <title></title>
+  <link rel="stylesheet" href="./css/aui.css">
+  <link rel="stylesheet" href="./css/swiper.min.css">
+  <style>
+    html, body {
+      position: relative;
+      height: 100%;
+    }
+    .swiper-container {
+      width: 100%;
+      height: 100%;
+    }
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: #fff;
+      position: relative;
+      /* Center slide text vertically */
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      -webkit-justify-content: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      -webkit-align-items: center;
+      align-items: center;
+    }
+    img{
+      display: block;
+      width: 100%;
+      height:100%;
+    }
+    button{
+      position: absolute;
+      bottom: 1.7rem;
+      width: 35%;
+      height:1.875rem;
+      font-size: .9rem;
+      border-radius: 1rem;
+      background:rgba(0,0,0,0);
+      border:1px solid #fff;
+      outline: none;
+      color: #fff;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-justify-content: center;
+      justify-content: center;
+      -webkit-align-items: center;
+      align-items: center;
+        z-index: 1000000;
+    }
+    button:active{
+      opacity: .8;
+    }
+    .pass{
+      position: absolute;
+      right: 1.175rem;
+      top:1rem;
+      font-size: .6rem;
+      color: #fff;
+      width: 2.45rem;
+      height: 1.25rem;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-justify-content: center;
+      justify-content: center;
+      -webkit-align-items: center;
+      align-items: center;
+      z-index: 100;
+      border-radius: 10rem;
+      background: rgba(255,255,255,.3)
+    }
+    .swiper-container-horizontal>.swiper-pagination-bullets{
+      bottom: 2.75rem;
+      z-index: 1000;
+    }
+    .swiper-pagination-bullet{
+      background: rgba(0,0,0,0);
+      border: 1px solid #fff;
+    }
+    .swiper-pagination-bullet-active{
+      background-color: #fff;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="pass">跳过</div>
+  <div class="swiper-container">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <img src="./image/guaid01.png" alt="">
+      </div>
+      <div class="swiper-slide">
+        <img src="./image/guaid02.png" alt="">
+      </div>
+      <div class="swiper-slide">
+        <img src="./image/guaid03.png" alt="">
+        <button>点击进入</button>
+      </div>
+    </div>
+    <!-- Add Pagination -->
+   <div class="swiper-pagination"></div>
+  </div>
+
+  <script src="./script/api.js"></script>
+  <script src="./script/swiper.min.js"></script>
+  <script>
+    var sliders =  $api.domAll('.swiper-slide')[2];
+    var swiper = new Swiper('.swiper-container', {
+      pagination: {
+        el: '.swiper-pagination',
+      },
+      on: {
+        slideChangeTransitionStart: function(event){
+          if($api.hasCls(sliders, 'swiper-slide-active')){
+            $api.dom('.swiper-pagination').style.display = "none";
+          }else{
+            $api.dom('.swiper-pagination').style.display = "block";
+          }
+        }
+      }
+    });
+  </script>
+</body>
+</html>

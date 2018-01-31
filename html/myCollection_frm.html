@@ -1,0 +1,213 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <title>我的收藏</title>
+    <link rel="stylesheet" type="text/css" href="../css/aui.css" />
+    <link rel="stylesheet" type="text/css" href="../css/csd.css" />
+    <style media="screen">
+      .aui-list .aui-list-item-media{
+        width: 6.25rem;
+        padding-right: 0;
+      }
+      .aui-list .aui-list-item-media img{
+        width: 6.25rem;
+        height: 4.075rem;
+      }
+      .aui-list .aui-list-item-inner{
+        height: 5.075rem;
+        padding: .5rem .75rem;
+      }
+      .aui-media-list-item-inner{
+        display: -webkit-box;
+      }
+      .aui-list .aui-list-item-text{
+        line-height: 1.018rem;
+      }
+      .aui-list .aui-list-item-title{
+        font-size: .675rem;
+      }
+      .aui-list .aui-list-item-text.dec-text{
+        font-size: .5rem;
+        color: #666;
+      }
+      .aui-list .aui-list-item-text.money-text{
+        font-size: .7rem;
+        color: #ff3333;
+      }
+      .aui-list .aui-list-item-text.date-text{
+        font-size: .55rem;
+        color: #666;
+      }
+      .aui-list .aui-list-item{
+         background-image: linear-gradient(0,#fff,#fff 50%,transparent 50%);
+         background-image: -webkit-linear-gradient(90deg,#fff,#fff 50%,transparent 50%);
+      }
+      .aui-searchbar{
+        height: auto;
+      }
+      .aui-searchbar-input{
+        margin: 0;
+        height: 1.45rem;
+        line-height: 1.45rem;
+        padding-left: .325rem;
+        border-radius: 0;
+      }
+      .aui-searchbar-input input{
+        height: 1.45rem;
+        width: 100%;
+        font-size: .5rem;
+        color: #999;
+      }
+      .aui-searchbar .aui-iconfont{
+        font-size: .55rem;
+      }
+      .header-bg{
+        height: 2.25rem;
+        background: none;
+      }
+      .aui-popup-content .aui-list .aui-list-item-inner{
+        height: 1.45rem;
+        padding:0;
+      }
+    </style>
+</head>
+<body>
+  <div class="header-bg" id="search">
+    <div class="header-search">
+      <div class="header-list" aui-popup-for="top-left">
+        <span class="" id="list-text">托管计划</span>
+          <div class="aui-popup aui-popup-top-left" id="top-left" style="display:none;">
+          <div class="aui-popup-arrow"></div>
+          <div class="aui-popup-content" aui-popup-for="top-left">
+              <ul class="aui-list aui-list-noborder" id="ulDown">
+                  <li class="aui-list-item">
+                      <div class="aui-list-item-inner" id="c1">
+                          托管计划
+                      </div>
+                  </li>
+                  <li class="aui-list-item">
+                      <div class="aui-list-item-inner" id="c2">
+                          会话消息
+                      </div>
+                  </li>
+                  <li class="aui-list-item">
+                      <div class="aui-list-item-inner" id="c3">
+                          我的收藏
+                      </div>
+                  </li>
+              </ul>
+          </div>
+        </div>
+        <b></b>
+      </div>
+      <div class="header-form">
+          <div class="aui-searchbar" id="search">
+              <div class="aui-searchbar-input aui-border-radius" tapmode="">
+                  <i class="aui-iconfont aui-icon-search"></i>
+                  <form action="">
+                      <input type="search" placeholder="请输入学校名称、所在城市、学校代码…" id="search-input">
+                  </form>
+              </div>
+          </div>
+      </div>
+    </div>
+  </div>
+  <ul class="aui-list aui-media-list">
+    <!-- 循环开始 -->
+    <li class="aui-list-item">
+      <div class="aui-media-list-item-inner">
+        <div class="aui-list-item-media">
+            <img src="../image/adr.png">
+        </div>
+        <div class="aui-list-item-inner">
+            <div class="aui-list-item-text">
+                <div class="aui-list-item-title aui-ellipsis-1">美国东海岸9日游美国东海岸9日游美国东海岸9日游</div>
+            </div>
+            <div class="aui-list-item-text dec-text aui-ellipsis-1">
+                加州小镇，三大公园，羚羊…
+            </div>
+            <div class="aui-list-item-text date-text aui-ellipsis-1">
+                2018/12/28
+            </div>
+            <div class="aui-list-item-text money-text aui-ellipsis-1">
+                $250.0
+            </div>
+        </div>
+      </div>
+    </li>
+    <div class="textLine"></div>
+    <!-- 循环结束 -->
+    <li class="aui-list-item">
+      <div class="aui-media-list-item-inner">
+        <div class="aui-list-item-media">
+            <img src="../image/adr.png">
+        </div>
+        <div class="aui-list-item-inner">
+            <div class="aui-list-item-text">
+                <div class="aui-list-item-title aui-ellipsis-1">美国东海岸9日游美国东海岸9日游美国东海岸9日游</div>
+            </div>
+            <div class="aui-list-item-text dec-text aui-ellipsis-1">
+                加州小镇，三大公园，羚羊…
+            </div>
+            <div class="aui-list-item-text date-text aui-ellipsis-1">
+                2018/12/28
+            </div>
+            <div class="aui-list-item-text money-text aui-ellipsis-1">
+                $250.0
+            </div>
+        </div>
+      </div>
+    </li>
+    <div class="textLine"></div>
+    <li class="aui-list-item">
+      <div class="aui-media-list-item-inner">
+        <div class="aui-list-item-media">
+            <img src="../image/adr.png">
+        </div>
+        <div class="aui-list-item-inner">
+            <div class="aui-list-item-text">
+                <div class="aui-list-item-title aui-ellipsis-1">美国东海岸9日游美国东海岸9日游美国东海岸9日游</div>
+            </div>
+            <div class="aui-list-item-text dec-text aui-ellipsis-1">
+                加州小镇，三大公园，羚羊…
+            </div>
+            <div class="aui-list-item-text date-text aui-ellipsis-1">
+                2018/12/28
+            </div>
+            <div class="aui-list-item-text money-text aui-ellipsis-1">
+                $250.0
+            </div>
+        </div>
+      </div>
+    </li>
+    <div class="textLine"></div>
+  </ul>
+</body>
+<script type="text/javascript" src="../script/api.js"></script>
+<script type="text/javascript" src="../script/aui-popup.js"></script>
+<script type="text/javascript">
+    apiready = function(){
+        api.parseTapmode();
+
+    };
+    function closeWin(){
+        api.closeWin({
+        });
+    }
+    var popup = new auiPopup();
+    //搜索分类选择
+    var listText = $api.byId('list-text');
+    var ulDown = $api.byId('ulDown');
+    //时间代理
+    $api.addEvt(ulDown, 'click', function(ev){
+    　　　 var target = ev.target;
+          //给span绑定data-id
+          $api.attr(listText,'data-id',target.id);
+          //更换span innerHTML
+          $api.html(listText,$api.html(target));
+    });
+</script>
+</html>

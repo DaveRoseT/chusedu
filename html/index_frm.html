@@ -1,0 +1,447 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0, minimum-scale=1.0, user-scalable=0, initial-scale=1.0, width=device-width" />
+    <meta name="format-detection" content="telephone=no, email=no, date=no, address=no">
+    <title>首页</title>
+    <link rel="stylesheet" type="text/css" href="../css/api.css" />
+    <link rel="stylesheet" type="text/css" href="../css/aui.css" />
+    <link rel="stylesheet" type="text/css" href="../css/csd.css" />
+    <link rel="stylesheet" type="text/css" href="../css/swiper.min.css" />
+    <style>
+      .aui-searchbar{
+        height: auto;
+      }
+      .aui-searchbar-input{
+        margin: 0;
+        height: 1.45rem;
+        line-height: 1.45rem;
+        padding-left: .325rem;
+        border-radius: 0;
+      }
+      .aui-searchbar-input input{
+        height: 1.45rem;
+        width: 100%;
+        font-size: .5rem;
+        color: #999;
+      }
+      .aui-searchbar .aui-iconfont{
+        font-size: .55rem;
+      }
+      .aui-list.news-list .aui-list-item{
+        color: #333;
+        padding-left: 0;
+        min-height: 1.45rem;
+      }
+      @media screen and (-webkit-min-device-pixel-ratio: 1.5){
+      .aui-list .aui-list-item {
+          background-image: -webkit-linear-gradient(90deg,#b70e00,#b70e00 50%,transparent 50%);
+      }
+    }
+      .aui-list .aui-list-item:active {
+          background-color: #b70e00;
+          opacity: .8;
+      }
+      .aui-grid [class*=aui-col-]{
+        padding: .5rem 0 0 0;
+      }
+      .aui-grid img{
+        display: block;
+        margin: 0 auto;
+        width: 2.575rem;
+        height: 2.45rem;
+      }
+      .aui-grid .aui-grid-label{
+        font-size: .6rem;
+        margin: 0;
+        padding: .4rem 0 .2rem 0;
+        color: #333;
+        letter-spacing: 1px;
+      }
+      .aui-tab-item{
+        width: auto;
+        padding:0 .4rem;
+        height: .925rem;
+        line-height: normal;
+        font-size: .45rem;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-align-items: center;
+        align-items: center;
+      }
+      .aui-tab{
+        padding: .75rem 0 .45rem 0;
+      }
+      .aui-tab-item.aui-active{
+        border: 0;
+        color: #fff;
+        background-color: #2a3a66;
+        border-radius: 1rem;
+
+      }
+      .aui-card-list{
+        margin-bottom:0;
+
+      }
+      .aui-card-list-content{
+        background:#f1f1f1;
+      }
+      .aui-card-list-content img{
+        /*width: 6.775rem;*/
+        height: 4.5rem;
+        margin: 0 auto;
+      }
+      .aui-card-list-footer{
+        width: 100%;
+        padding: .2rem 0 .2rem .25rem;
+        min-height: auto;
+        flex-direction: column;
+        -webkit-justify-content: space-between;
+        justify-content: space-between;
+        -webkit-align-items: center;
+        align-items: unset;
+      }
+      .swiper-slide{
+        /*margin-right: .4rem;*/
+        -webkit-box-shadow:2px 2px 4px #dbdbdb;
+        box-shadow: 2px 2px 4px #dbdbdb;
+        margin-bottom: .3rem;
+      }
+      .aui-popup-content .aui-list .aui-list-item-inner{
+        height: 1.45rem;
+      }
+      .aui-bar-nav{
+        background:#999;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1000;
+        min-height: auto;
+        height:auto;
+        opacity: 0;
+      }
+
+
+    </style>
+</head>
+<body>
+  <!-- 沉浸式状态栏 -->
+  <header class="aui-bar aui-bar-nav" id="aui-header"></header>
+  <!-- 首页背景层 -->
+  <div class="header-bg">
+    <div class="header-ser">
+      <h1>
+        家校沟通服务
+      </h1>
+      <p>
+        通过跟1000多家热门学校合作，以双语形式为您推送孩子出勤情况、测评成绩、老师评价等信息；提供专业的双语翻译服务，定期安排学校、家长、学生视频沟通的网络家长会。
+      </p>
+    </div>
+    <div class="header-search">
+      <div class="header-list"  aui-popup-for="top-left">
+        <span class="" id="list-text">托管计划</span>
+          <div class="aui-popup aui-popup-top-left" id="top-left" style="display:none;">
+          <div class="aui-popup-arrow"></div>
+          <div class="aui-popup-content" aui-popup-for="top-left">
+              <ul class="aui-list aui-list-noborder" id="ulDown">
+                  <li class="aui-list-item">
+                      <div class="aui-list-item-inner" id="c1">
+                          托管计划
+                      </div>
+                  </li>
+                  <li class="aui-list-item">
+                      <div class="aui-list-item-inner" id="c2">
+                          会话消息
+                      </div>
+                  </li>
+                  <li class="aui-list-item">
+                      <div class="aui-list-item-inner" id="c3">
+                          我的收藏
+                      </div>
+                  </li>
+              </ul>
+          </div>
+        </div>
+        <b></b>
+      </div>
+      <div class="header-form">
+          <div class="aui-searchbar" id="search">
+              <div class="aui-searchbar-input aui-border-radius" tapmode="">
+                  <i class="aui-iconfont aui-icon-search"></i>
+                  <form action="">
+                      <input type="search" placeholder="请输入学校名称、所在城市、学校代码…" id="search-input">
+                  </form>
+              </div>
+          </div>
+      </div>
+    </div>
+  </div>
+  <!-- 分类 -->
+  <div class="aui-content">
+    <section class="aui-grid">
+        <div class="aui-row">
+            <div class="aui-col-xs-4 tapmode">
+                <img src="../icon/tb01.png" alt="">
+                <div class="aui-grid-label">家校沟通</div>
+            </div>
+            <div class="aui-col-xs-4 tapmode">
+                <img src="../icon/tb02.png" alt="">
+                <div class="aui-grid-label">寄宿家庭</div>
+            </div>
+            <div class="aui-col-xs-4 tapmode">
+                <img src="../icon/tb03.png" alt="">
+                <div class="aui-grid-label">假期托管</div>
+            </div>
+            <div class="aui-col-xs-4 tapmode">
+                <img src="../icon/tb04.png" alt="">
+                <div class="aui-grid-label">学业辅导</div>
+            </div>
+            <div class="aui-col-xs-4 tapmode">
+                <img src="../icon/tb05.png" alt="">
+                <div class="aui-grid-label">培训教育</div>
+            </div>
+            <div class="aui-col-xs-4 tapmode">
+                <img src="../icon/tb06.png" alt="">
+                <div class="aui-grid-label">互动论坛</div>
+            </div>
+        </div>
+    </section>
+  </div>
+  <!-- 公告 -->
+  <div class="notice-box">
+    <div class="notice-img">
+      <img src="../icon/hot.png" alt="">
+    </div>
+    <div class="notice-body" id="notice-gg">
+        <ul class="mingdan" id="holder">
+          <li class="tapmode aui-ellipsis-1">出色读新版功能上线了！出色读新版功能上线了！出色读新版功能上线了！出色读新版功能上线了！</li>
+          <li class="tapmode aui-ellipsis-1">出色读新版功能上线了！出色读新版功能上线了！</li>
+          <li class="tapmode aui-ellipsis-1">出色读新版功能上线了！1出色读新版功能上线了！1出色读新版功能上线了！1</li>
+        </ul>
+    </div>
+  </div>
+  <!-- 宣传 -->
+  <div class="drum">
+    <img src="../image/adr.png" alt="">
+  </div>
+  <!-- 优质寄宿家庭 -->
+  <div class="case case-no-pad-r">
+    <div class="case-bt case-pad-r-75">
+      <h1>优质/<span>寄宿家庭</span><i class="aui-iconfont aui-icon-right aui-pull-right tapmode"></i></h1>
+    </div>
+    <div class="case-body">
+      <div class="aui-tab" id="tab">
+            <div class="aui-tab-item tapmode aui-active">纽约</div>
+            <div class="aui-tab-item tapmode">中华人民共和国</div>
+            <div class="aui-tab-item tapmode">Environment</div>
+        </div>
+        <div class="aui-tabcon">
+          <div class="" style="display:block;">
+            <div class="swiper-container swiper-container1">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="aui-card-list">
+                      <div class="aui-card-list-content">
+                          <img src="../image/case.png" />
+                      </div>
+                      <div class="aui-card-list-footer case-h3">
+                          <h3 class="aui-ellipsis-1">Chicago 附近的公寓附近的公寓附近的公寓</h3>
+                          <p class="aui-ellipsis-1">Chicago</p>
+                          <span>$1.140-$1.440</span>
+                      </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="aui-card-list">
+                      <div class="aui-card-list-content">
+                          <img src="../image/case.png" />
+                      </div>
+                      <div class="aui-card-list-footer case-h3">
+                          <h3 class="aui-ellipsis-1">Chicago 附近的公寓附近的公寓附近的公寓</h3>
+                          <p class="aui-ellipsis-1">Chicago</p>
+                          <span>$1.140-$1.440</span>
+                      </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="aui-card-list">
+                      <div class="aui-card-list-content">
+                          <img src="../image/case.png" />
+                      </div>
+                      <div class="aui-card-list-footer case-h3">
+                          <h3 class="aui-ellipsis-1">Chicago 附近的公寓附近的公寓附近的公寓</h3>
+                          <p class="aui-ellipsis-1">Chicago</p>
+                          <span>$1.140-$1.440</span>
+                      </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="">
+            2
+          </div>
+          <div class="">
+          3
+          </div>
+
+        </div>
+    </div>
+  </div>
+  <div class="case case-no-pad-r">
+    <div class="case-bt case-pad-r-75">
+      <h1>热门/<span>学校</span><i class="aui-iconfont aui-icon-right aui-pull-right tapmode"></i></h1>
+    </div>
+    <div class="case-body" style="padding-top:.45rem;">
+            <div class="swiper-container">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <b></b>
+                  <div class="aui-card-list">
+                      <div class="aui-card-list-content">
+                          <img src="../image/case.png" />
+                      </div>
+                      <div class="aui-card-list-footer case-h3 case-h3-d">
+                          <h3 class="aui-ellipsis-1">Chicago 附近的公寓附近的公寓附近的公寓</h3>
+                      </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="aui-card-list">
+                      <div class="aui-card-list-content">
+                          <img src="../image/case.png" />
+                      </div>
+                      <div class="aui-card-list-footer case-h3 case-h3-d">
+                          <h3 class="aui-ellipsis-1">Chicago 附近的公寓附近的公寓附近的公寓</h3>
+                      </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="aui-card-list">
+                      <div class="aui-card-list-content">
+                          <img src="../image/case.png" />
+                      </div>
+                      <div class="aui-card-list-footer case-h3 case-h3-d">
+                          <h3 class="aui-ellipsis-1">Chicago 附近的公寓附近的公寓附近的公寓</h3>
+                      </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+        </div>
+  </div>
+  <div class="case" style="">
+    <div class="case-bt" style="7">
+      <h1>留学咨询<i class="aui-iconfont aui-icon-right aui-pull-right tapmode"></i></h1>
+    </div>
+    <div class="case-body">
+      <ul class="aui-list aui-media-list news-list">
+
+            <li class="aui-list-item">
+                <div class="aui-media-list-item-inner">
+                  <div class="aui-list-item-media">
+                      <img src="../image/list.png">
+                  </div>
+                  <div class="aui-list-item-inner">
+                      <div class="aui-list-item-title aui-ellipsis-1">媒体项右侧显示媒体项右侧显示媒体项右侧显示媒体项右侧显示</div>
+                      <div class="aui-list-item-text aui-ellipsis-2">
+                          这里是内容区域，新版中的列表布局可以很轻松的帮助开发者完成常见列表样式。
+                      </div>
+                  </div>
+                </div>
+            </li>
+            <li class="aui-list-item">
+                <div class="aui-media-list-item-inner">
+                  <div class="aui-list-item-media">
+                      <img src="../image/list.png">
+                  </div>
+                  <div class="aui-list-item-inner">
+                      <div class="aui-list-item-title aui-ellipsis-1">媒体项右侧显示</div>
+                      <div class="aui-list-item-text aui-ellipsis-2">
+                          这里是内容区域，新版中的列表布局可以很轻松的帮助开发者完成常见列表样式。
+                          这里是内容区域，新版中的列表布局可以很轻松的帮助开发者完成常见列表样式。
+                      </div>
+                  </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+  </div>
+<script type="text/javascript" src="../script/api.js"></script>
+<script type="text/javascript" src="../script/aui-popup.js"></script>
+<script type="text/javascript" src="../script/aui-tab.js"></script>
+<script type="text/javascript" src="../script/jquery.min.js"></script>
+<script type="text/javascript" src="../script/swiper.min.js"></script>
+<script type="text/javascript">
+  apiready = function(){
+      api.parseTapmode();
+
+      var header = $api.byId('aui-header');
+      $api.fixStatusBar(header);
+      api.setStatusBarStyle({
+          style: 'light'
+      });
+  }
+  var popup = new auiPopup();
+  //搜索分类选择
+  var listText = $api.byId('list-text');
+  var ulDown = $api.byId('ulDown');
+  //时间代理
+  $api.addEvt(ulDown, 'click', function(ev){
+  　　　 var target = ev.target;
+        //给span绑定data-id
+        $api.attr(listText,'data-id',target.id);
+        //更换span innerHTML
+        $api.html(listText,$api.html(target));
+  });
+
+  //公告效果
+  function AutoScroll(obj) {
+    var liHeight = $('.mingdan li').height();
+    $(obj).find("ul:first").animate({
+      marginTop: "-" + liHeight + "px"
+    }, 100, function() {
+      $(this).css({ marginTop: "0px" }).find("li:first").appendTo(this);
+    });
+  }
+  $(document).ready(function() {
+    setInterval('AutoScroll("#notice-gg")', 3000)
+  });
+  //选项卡
+  var tab = new auiTab({
+      element:document.getElementById("tab")
+    },function(ret){
+      //ret两个index dom
+      $(".aui-tabcon>div").hide().eq(ret.index-1).show();
+    });
+    var swiper1 = new Swiper('.swiper-container', {
+         slidesPerView: 2.5,
+         spaceBetween: 8,
+       });
+       //沉浸式状态栏
+       window.addEventListener('scroll', function () {
+       var header = $api.byId('aui-header');//获取到导航栏id
+          if(getScrollTop() > header.offsetHeight){
+             $api.css(header,'opacity:.7');
+          }
+          else{//当滚动距离小于250的时候执行下面的内容，也就是让导航栏恢复原状
+             $api.css(header,'opacity:0');
+         }
+       })
+       //滚动条距顶部距离
+       function getScrollTop(){
+         var scrollTop=0;
+         if(document.documentElement&&document.documentElement.scrollTop){
+             scrollTop=document.documentElement.scrollTop;
+         }else if(document.body){
+             scrollTop=document.body.scrollTop;
+         }
+         return scrollTop;
+       }
+</script>
+
+</html>

@@ -1,0 +1,156 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <title>房东信息</title>
+    <link rel="stylesheet" type="text/css" href="../css/aui.css" />
+    <link rel="stylesheet" type="text/css" href="../css/csd.css" />
+    <style media="screen">
+      .aui-list .aui-list-item-inner{
+        height: auto;
+        padding: 0;
+        margin: .5rem .75rem;
+      }
+      .aui-list .aui-list-item-media img{
+        width: 4.5rem;
+        height: 4.5rem;
+      }
+      .aui-list .aui-list-item-media{
+        padding-right: 0;
+      }
+      .aui-list .aui-list-item-title{
+        font-size: .9rem;
+        color: #b70e00;
+        font-weight: 600;
+        margin-bottom: 0rem;
+      }
+      .aui-list .aui-list-item-text{
+        line-height: normal;
+        font-size: .6rem;
+        color: #666;
+        display: -webkit-box;
+      }
+      .aui-list .aui-list-item-inner>div:last-child{
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+      }
+      .aui-list .aui-list-item-inner>div:last-child i{
+        color: #3f87ff;
+      }
+      .aui-list .aui-list-item-inner>div:last-child button{
+        border-color: #3f87ff;
+        outline: none;
+        color: #3f87ff;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-align-items: center;
+        align-items: center;
+      }
+      .aui-list .aui-list-item-inner>div:last-child button:last-child{
+        background-color: #3f87ff;
+        color: #fff;
+        border: 0;
+      }
+      .aui-list .aui-list-item-inner>div:last-child  button:last-child i{
+        color: #fff;
+      }
+      .aui-list .aui-list-item:active{
+        background-color: #fff;
+      }
+    </style>
+</head>
+<body>
+  <div class="aui-content">
+    <ul class="aui-list aui-media-list">
+      <li class="aui-list-item">
+        <div class="aui-media-list-item-inner">
+          <div class="aui-list-item-media">
+            <img src="../image/case.png">
+          </div>
+          <div class="aui-list-item-inner">
+            <div class="aui-list-item-text">
+              <!--
+            title未做溢出隐藏 -->
+              <div class="aui-list-item-title">Simth John</div>
+            </div>
+            <div class="aui-list-item-text aui-ellipsis-2">
+                We love kids! We look forward to your arrival! No Smoke and dri
+                We love kids! We look forward to your arrival! No Smoke and dri
+            </div>
+            <div class="aui-list-item-text">
+              <button class="aui-btn aui-btn-outlined"><i class="aui-iconfont aui-icon-comment"></i>联系房东</button>
+              <button class="aui-btn"><i class="aui-iconfont aui-icon-date"></i>直接预定</button>
+            </div>
+          </div>
+        </div>
+      </li>
+    </ul>
+    <div class="textLine"></div>
+    <div class="case case-pad-b-75">
+      <div class="case-bt">
+        <h1>家庭信息</h1>
+      </div>
+      <div class="home-info">
+          白种人/家中没有人抽烟/有宠物
+      </div>
+    </div>
+    <div class="textLine"></div>
+    <div class="case case-pad-b-75">
+      <div class="case-bt">
+        <h1>家庭成员</h1>
+      </div>
+      <div class="aui-row home-info">
+        <div class="aui-col-5 aui-ellipsis-1">
+          房主：男/硕士
+        </div>
+        <div class="aui-col-5 aui-ellipsis-1">
+          配偶：女/学院大学
+        </div>
+        <div class="aui-col-5 aui-ellipsis-1">
+          儿子：13岁
+        </div>
+      </div>
+    </div>
+    <div class="textLine"></div>
+    <div class="case case-pad-b-75">
+      <div class="case-bt">
+        <h1>描述<a class="aui-pull-right">翻译</a></h1>
+      </div>
+      <div class="home-info">
+        Dear Guest,  It is great pleasure to be your host parents and IDear Guest,  It is great pleasure to be your host parents and IDear Guest,  It is great pleasure to be your host parents and I
+      </div>
+    </div>
+    <div class="textLine"></div>
+    <div class="case case-pad-b-75">
+      <div class="case-bt">
+        <h1>规则<a class="aui-pull-right">翻译</a></h1>
+      </div>
+      <div class="home-info">
+        Dear Guest,  It is great pleasure to be your host parents and IDear Guest,  It is great pleasure to be your host parents and IDear Guest,  It is great pleasure to be your host parents and I
+      </div>
+    </div>
+  </div>
+</body>
+<script type="text/javascript" src="../script/api.js"></script>
+<script type="text/javascript" src="../script/aui-tab.js"></script>
+<script type="text/javascript" src="../script/jquery.min.js"></script>
+<script type="text/javascript">
+  apiready = function(){
+      api.parseTapmode();
+  };
+  var tab = new auiTab({
+      element:document.getElementById("tab")
+  },function(ret){
+      $(".aui-tabcon>div").hide().eq(ret.index-1).show();
+  });
+  function closeWin(){
+      api.closeWin({
+      });
+  }
+</script>
+</html>
