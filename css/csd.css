@@ -36,16 +36,16 @@
   padding-left: 1.2rem;
 }
 .header-bg .header-ser h1{
-  font-size: 1.225rem;
+  font-size: 1.325rem;
   color: #fff;
   letter-spacing: 2px;
   line-height: 2.95rem;
   margin-top: .9rem;
 }
 .header-bg .header-ser p{
-  font-size: .35rem;
+  font-size: .45rem;
   color: #fff;
-  width: 8.75rem;
+  width: 9.75rem;
   line-height: .6rem;
 }
 .header-bg .header-search{
@@ -59,7 +59,7 @@
   position: absolute;
   left: 0;
   z-index: 10;
-  width: 19%;
+  width: 20%;
   background-color: #b70e00;
   height: 1.45rem;
   display: -webkit-flex;
@@ -72,8 +72,10 @@
 .header-bg .header-search .header-list span{
   font-size: .5rem;
   color: #fff;
-  text-indent: .3rem;
+  text-indent: .4rem;
 }
+
+
 .header-bg .header-search .header-list li{
   text-align: center;
   font-size: .5rem;
@@ -89,9 +91,9 @@
 }
 .header-bg .header-search .header-list b{
   position: absolute;
-  right: 5px;
+  right: 7px;
   bottom: 0;
-  top: 0;
+  top: -1px;
   margin: auto;
   width: 0;
   height: 0;
@@ -104,7 +106,7 @@
   position: absolute;
   right: 0px;
   z-index: 1;
-  width: 81%;
+  width: 80%;
 }
 .notice-box{
   background-color: #fff;
@@ -177,7 +179,7 @@
 }
 .case-bt h1{
   font-weight: normal;
-  font-size: .7rem;
+  font-size: .8rem;
   color: #333366;
   padding-left: .425rem;
   letter-spacing: 1px;
@@ -188,7 +190,7 @@
 .case-bt h1 i{
   font-size: .6rem;
   font-weight: bold;
-  margin-top: .1rem;
+  margin-top: 0rem;
 }
 .case-bt h1 i:active{
   opacity: .8;
@@ -202,18 +204,18 @@
 }
 .case-h3 h3{
   font-weight: normal;
-  font-size: .6rem;
+  font-size: .7rem;
   color: #333;
 
 }
 .case-h3 p{
-  font-size: .45rem;
+  font-size: .65rem;
   display: block;
   color: #666;
 
 }
 .case-h3 span{
-  font-size: .5rem;
+  font-size: .6rem;
   color: #ff3333;
   display: block;
 }
@@ -278,13 +280,13 @@
 }
 
 .aui-list.news-list .aui-list-item-title{
-  font-size: .6rem;
+  font-size: .7rem;
   color: #333;
   line-height: 1.4rem;
 }
 .aui-list.news-list .aui-list-item-text{
     display: -webkit-box;
-    font-size: .5rem;
+    font-size: .6rem;
     color: #666666;
 }
 .aui-list.news-list .aui-list-item:active{
@@ -347,14 +349,14 @@
 }
 .fy-h3 h3{
   padding: 0;
-  font-size: .6rem;
+  font-size: .7rem;
   color: #333;
   line-height: 1.1rem;
   margin-top: .25rem;
 }
 .fy-h3 p{
   padding: 0;
-  font-size: .45rem;
+  font-size: .55rem;
   text-align: center;
 }
 .case-box{
@@ -585,7 +587,7 @@
 }
 .xq-body .aui-list .aui-list-item-inner>div{
   line-height: 1.25rem;
-  font-size: .6rem;
+  font-size: .7rem;
   color: #333;
 }
 .xq-body .aui-list .aui-list-item-inner>div span{
@@ -628,8 +630,8 @@
 .xq-holidayDay .aui-list .aui-list-item-inner a{
   position: absolute;
   right: .75rem;
-  bottom: .5rem;
-  font-size: .6rem;
+  bottom: .35rem;
+  font-size: .7rem;
   color: #2a3a66;
   text-decoration: underline;
 }
@@ -637,7 +639,7 @@
   background-color: #fff;
 }
 .total-date .aui-col-5{
-  font-size: .6rem;
+  font-size: .7rem;
   font-weight: bold;
   line-height: 1rem;
   padding-left: .425rem;
@@ -649,7 +651,7 @@
   font-weight: 400;
 }
 .home-info{
-  font-size: .6rem;
+  font-size: .7rem;
   color: #666;
   padding-left: .425rem;
   line-height: 1rem;
@@ -927,4 +929,17 @@
 }
 .btnFix a:active{
   opacity: .8;
+}
+@media screen and (max-width: 320px) {
+  .header-bg .header-search .header-list span{
+    font-size: .5rem;
+    color: #fff;
+    text-indent: .2rem;
+  }
+  .aui-list .aui-list-item-inner {
+    width: 11rem;
+  }
+  .xq-holidayDay .aui-list .aui-list-item-inner a{
+    display: none;
+  }
 }

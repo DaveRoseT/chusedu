@@ -44,6 +44,10 @@
           width: 22%;
           padding: 0;
         }
+        .ship-res i {
+          position: absolute;
+          right: .5rem;
+        }
       }
     </style>
 </head>
@@ -203,7 +207,7 @@
     var setTop =$api.byId('set-top');
     var divS = $api.domAll(setTop, 'div');
     $api.addEvt(setTop, 'click', function(e){
-      
+
       var target = e.target;
       $api.addCls(target, 'active');
       for(var i = 0; i < divS.length; i++){
