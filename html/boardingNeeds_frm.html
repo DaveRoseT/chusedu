@@ -1,0 +1,286 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <link rel="stylesheet" type="text/css" href="../css/aui.css" />
+    <link rel="stylesheet" type="text/css" href="../css/csd.css" />
+    <style media="screen">
+    .aui-list {
+      background-image: linear-gradient(0,#fff,#fff 50%,transparent 50%);
+    }
+    .aui-list .aui-list-item {
+      background-image: linear-gradient(0,#fff,#fff 50%,transparent 50%);
+      background-image: -webkit-linear-gradient(90deg,#fff,#fff 50%,transparent 50%);
+      padding-left: 0;
+    }
+    .aui-list .aui-list-item-media{
+      height: 3.5rem;
+      width: 2.5rem;
+      padding-right: 0;
+    }
+    .aui-list .aui-list-item-media img{
+      height: 2.5rem;
+      width: 2.5rem;
+    }
+    .aui-list .aui-list-item-title{
+      font-size: .7rem;
+    }
+    .aui-list .aui-list-item-text{
+      font-size: .6rem;
+      line-height: .83rem;
+    }
+    .aui-media-list .aui-list-item-inner{
+      height: 3.5rem;
+    }
+    .aui-form-list .aui-list-item-inner{
+      height: auto;
+    }
+    .aui-list .aui-list-item-label-icon{
+      font-size: .8rem;
+      width: 6rem;
+    }
+    input[type="text"]{
+      font-size: .7rem;
+      color: #999;
+    }
+    input[type="date"]{
+      font-size: .7rem;
+      height: 1.8rem;
+      line-height: 1.8rem;
+      color: #999;
+      border: 1px solid #ccc;
+      margin:.2rem 0;
+      position: relative;
+      z-index: 10;
+    }
+    .aui-form-list .aui-list-item::after{
+      position: absolute;
+      right: .5rem;
+      bottom: 0;
+      left: 0rem;
+      height: 1px;
+      content: '';
+      -webkit-transform: scaleY(.5);
+      transform: scaleY(.5);
+      background-color: #f4f4f4;
+    }
+    .aui-form-list .aui-list-item:last-child::after{
+      height: 0;
+    }
+    .aui-list .aui-list-item-input{
+      position: relative;
+      padding-right: 2rem;
+    }
+    .aui-grid [class*=aui-col-]{
+      padding: .5rem 0;
+    }
+    textarea{
+      box-shadow: 0 0 1px #cccccc;
+      font-size: .7rem;
+      padding-left: .425rem;
+      padding: .8rem 0 0 .425rem;
+      height: 7.5rem;
+      margin-top: .675rem;
+    }
+    .aui-list .aui-list-item .aui-list-item-input i.aui-iconfont{
+      position: absolute;
+      right: 2.3rem;
+      top:.4rem;
+      font-size: 1rem;
+      color: #999;
+    }
+    </style>
+</head>
+<body>
+  <div class="case case-no-pad-r aui-content case-border case-pad-t-5">
+    <div class="case-bt case-pad-r-75">
+      <h1>学生信息/<span>请选择您的学生</span></h1>
+    </div>
+    <ul class="aui-list aui-media-list">
+        <li class="aui-list-item aui-list-item-middle">
+            <div class="aui-media-list-item-inner">
+                <div class="aui-list-item-media">
+                    <img src="../image/case.png" class="aui-img-round">
+                </div>
+                <div class="aui-list-item-inner aui-padded-l-15">
+                    <div class="aui-list-item-text">
+                        <div class="aui-list-item-title">Xiaoxiao Li (李笑笑)</div>
+                    </div>
+                    <div class="aui-list-item-text">
+                        国籍：中国    性别：女
+                    </div>
+                    <div class="aui-list-item-text">
+                        生日：01/09/2001
+                    </div>
+                </div>
+            </div>
+        </li>
+      </ul>
+      <div class="aui-row taste">
+        <div class="boxi">
+          <i class="aui-iconfont aui-icon-down aui-pull-right tapmode"></i>
+        </div>
+        <div class="aui-col-xs-6 aui-ellipsis-1">赴美时间：01/05/2018</div>
+        <div class="aui-col-xs-6 aui-ellipsis-1">过敏源：动物皮屑、其它过敏源：动物皮屑、其它过敏源：动物皮屑、其它过敏源：动物皮屑、其它v</div>
+        <div class="aui-col-xs-6 aui-ellipsis-1">入读年级：十年级</div>
+        <div class="aui-col-xs-6 aui-ellipsis-1">运动：冰球、网球、游泳</div>
+        <div class="aui-col-xs-6 aui-ellipsis-1">性格：成熟、安静</div>
+        <div class="aui-col-xs-6 aui-ellipsis-1">兴趣爱好：棋类、电玩</div>
+      </div>
+  </div>
+  <div class="textLine"></div>
+  <div class="case case-no-pad-r aui-content case-pad-t-5" style="padding-bottom:.5rem;">
+    <div class="case-bt case-pad-r-75">
+      <h1>寄宿需求</h1>
+    </div>
+    <ul class="aui-list aui-form-list" id="date">
+      <li class="aui-list-item">
+          <div class="aui-list-item-inner aui-list-item-arrow">
+              <div class="aui-list-item-label-icon">
+                所在  州
+              </div>
+              <div class="aui-list-item-input">
+                  <input type="text" placeholder="所在  州">
+              </div>
+          </div>
+      </li>
+      <li class="aui-list-item">
+          <div class="aui-list-item-inner aui-list-item-arrow">
+              <div class="aui-list-item-label-icon">
+                所在城市
+              </div>
+              <div class="aui-list-item-input">
+
+                  <input type="text" placeholder="所在城市">
+              </div>
+          </div>
+      </li>
+      <li class="aui-list-item">
+          <div class="aui-list-item-inner aui-list-item-arrow">
+              <div class="aui-list-item-label-icon">
+                留学学校
+              </div>
+              <div class="aui-list-item-input">
+                  <input type="text" placeholder="留学学校">
+              </div>
+          </div>
+      </li>
+      <li class="aui-list-item date-item">
+          <div class="aui-list-item-inner">
+              <div class="aui-list-item-label-icon">入住时间</div>
+              <div class="aui-list-item-input">
+                  <i class="aui-iconfont aui-icon-date"></i>
+                <!-- <div class="mark-bg">入住时间</div> -->
+                  <input type="date">
+              </div>
+          </div>
+      </li>
+      <li class="aui-list-item date-item">
+          <div class="aui-list-item-inner">
+              <div class="aui-list-item-label-icon">搬出时间</div>
+              <div class="aui-list-item-input">
+                <i class="aui-iconfont aui-icon-date"></i>
+                <!-- <div class="mark-bg">搬出时间</div> -->
+                  <input type="date">
+              </div>
+          </div>
+      </li>
+    </ul>
+  </div>
+  <div class="textLine"></div>
+  <div class="case" style="padding-bottom:.5rem;">
+    <div class="case-bt">
+      <h1>额外服务<i class="aui-iconfont aui-icon-down aui-pull-right tapmode"></i></h1>
+    </div>
+    <div class="aui-grid aui-servic-list aui-imgtb-list">
+      <div class="aui-row">
+          <div class="aui-col-xs-4">
+              <i></i>
+              <div class="aui-grid-label">停车位</div>
+          </div>
+          <div class="aui-col-xs-4">
+              <i></i>
+              <div class="aui-grid-label">上学交通</div>
+          </div>
+          <div class="aui-col-xs-4">
+            <i></i>
+              <div class="aui-grid-label">放学交通</div>
+          </div>
+          <div class="aui-col-xs-4">
+              <i></i>
+              <div class="aui-grid-label">课外活动交通</div>
+          </div>
+          <div class="aui-col-xs-4">
+              <i></i>
+              <div class="aui-grid-label">接机</div>
+          </div>
+          <div class="aui-col-xs-4">
+              <i></i>
+              <div class="aui-grid-label">家庭活动</div>
+          </div>
+      </div>
+    </div>
+  </div>
+  <div class="textLine"></div>
+  <div class="case" style="padding-bottom:.5rem;">
+    <div class="case-bt">
+      <h1>给寄宿家庭的信<i class="aui-iconfont aui-icon-down aui-pull-right tapmode"></i></h1>
+    </div>
+      <div class="aui-list-item-inner">
+          <div class="aui-list-item-input">
+              <textarea placeholder="给寄宿家庭的信"></textarea>
+          </div>
+      </div>
+  </div>
+  <div class="form-btn">
+    <button class="aui-btn aui-btn-block"  tapmode onclick="showDefault('success')">发布需求</button>
+  </div>
+</body>
+<script type="text/javascript" src="../script/api.js"></script>
+<script type="text/javascript" src="../script/aui-toast.js"></script>
+<script type="text/javascript">
+    apiready = function(){
+        api.parseTapmode();
+    };
+    function closeWin(){
+        api.closeWin({
+        });
+    }
+    var toast = new auiToast();
+     function showDefault(){
+       toast.success({
+           title:"提交成功",
+           duration:2000
+       });
+     }
+  //  var date = $api.byId('date');
+    //var inputs = $api.domAll('input[type="date"]')
+     /*$api.addEvt(date, 'click', function(e){
+       var target = e.target;
+       var thisIi = target.parentNode.parentNode.parentNode;
+       var markBg = $api.prev(target);
+       var inputVal =  $api.val(target);
+       if(inputVal == ""){
+          markBg.style.display = "block";
+       }
+        console.log(markBg.style.display)
+       if(thisIi.nodeName.toLowerCase() == 'li' && $api.hasCls(thisIi, 'date-item')){
+         //var display1 = markBg.style.display;
+
+              markBg.style.display = (inputVal == "") ? "block" : "none";
+         }
+     });*/
+    var imgtbList = $api.dom('.aui-imgtb-list')
+    $api.addEvt(imgtbList, 'click', function(e){
+       var target = e.target;
+       if((target.nodeName.toLowerCase() == 'i' || $api.hasCls(target,'aui-grid-label'))){
+          $api.toggleCls(target.parentNode, 'active');
+       }
+       if($api.hasCls(target, 'aui-col-xs-4')){
+        $api.toggleCls(target, 'active');
+       }
+    });
+</script>
+</html>

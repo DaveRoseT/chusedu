@@ -1,0 +1,249 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <link rel="stylesheet" type="text/css" href="../css/aui.css" />
+    <link rel="stylesheet" type="text/css" href="../css/csd.css" />
+    <style media="screen">
+      .aui-tab-item{
+        font-size: .8rem;
+        color: #333;
+      }
+      .aui-tab-item.aui-active {
+          color: #333;
+          border-bottom: 2px solid #b70e00;
+      }
+      .aui-card-list-header{
+        display: block;
+        line-height: 1.2rem;
+      }
+      .aui-tab:before,.aui-card-list-content-padded:before{
+        position: absolute;
+        right: -.5rem;
+        top: 0;
+        left: -.5rem;
+        height: 1px;
+        content: '';
+        -webkit-transform: scaleY(.5);
+        transform: scaleY(.5);
+        background-color: #f6f6f6;
+      }
+    .aui-card-list-content-padded:after{
+        position: absolute;
+        right: -.5rem;
+        bottom: 0;
+        left: -.5rem;
+        height: 1px;
+        content: '';
+        -webkit-transform: scaleY(.5);
+        transform: scaleY(.5);
+        background-color: #f6f6f6;
+        z-index: 1;
+      }
+      .aui-list .aui-list-header{
+        padding: 0;
+      }
+      .aui-list .aui-list-item{
+        padding-left: 0;
+      }
+      .aui-info-item{
+        font-size: .7rem;
+        color: #333333;
+        font-weight: bold;
+      }
+      .aui-info-item span{
+        color: #b70e00;
+      }
+      .aui-list .aui-list-item-media{
+        width: 5rem;
+        padding:0;
+      }
+      .aui-list .aui-list-item-media img{
+        width: 5rem;
+        height: 3.75rem;
+      }
+      .aui-list .aui-list-item-title,.aui-list .aui-list-item-right{
+          font-weight: bold;
+          font-size: .7rem;
+          color: #333;
+          width: 70%;
+      }
+      .aui-list .aui-list-item-right{
+          width: 25%;
+          text-align: right;
+      }
+      .aui-list .aui-list-item-inner{
+        height: 3.75rem;
+        width: 13rem;
+        padding: 0 0 0 .5rem;
+      }
+      @media screen and (max-width:320px){
+        .aui-list .aui-list-item-inner{
+            width: 9.5rem;
+        }
+        .aui-list .aui-list-item-title{
+            width: 60%;
+        }
+        .aui-list .aui-list-item-right{
+            width:35%;
+        }
+      }
+      @media screen and (min-width:321px) and (max-width:360px){
+        .aui-list .aui-list-item-inner{
+          width: 11.5rem;
+        }
+        .aui-list .aui-list-item-right{
+            width:30%;
+        }
+      }
+      .aui-list .aui-list-item-text{
+        font-size: .65rem;
+        overflow: hidden;
+        line-height: .95rem;
+      }
+    .aui-card-list-footer{
+        -webkit-justify-content: flex-end;
+        justify-content: flex-end;
+      }
+      .aui-card-list-footer > button:last-child{
+        margin-left: .5rem;
+        border: 0;
+      }
+      .aui-media-list-item-inner{
+        overflow: hidden;
+      }
+      .aui-btn-info {
+          color: #ffffff !important;
+          background-color: #3f87ff !important;
+      }
+      .aui-btn-info.aui-btn-outlined {
+          color: #3f87ff !important;
+          border: 1px solid #3f87ff !important;
+          background-color: #fff !important;
+      }
+      .aui-card-list-content-padded{
+        z-index: 10;
+      }
+    </style>
+</head>
+<body>
+  <div class="aui-content">
+    <div class="aui-tab" id="tab">
+        <div class="aui-tab-item aui-active" tapmode>家校沟通</div>
+        <div class="aui-tab-item" tapmode><div></div>寄宿家庭</div>
+        <div class="aui-tab-item" tapmode>假期托管</div>
+    </div>
+
+    <div class="aui-tabcon" id="auiTab" style="">
+      <ul class="aui-list aui-media-list">
+        <div class="textLine"></div>
+        <li class="aui-list-item">
+          <div class="aui-card-list">
+            <div class="aui-card-list-header">
+              <div class="aui-info" style="padding:0">
+                  <div class="aui-info-item">
+                      订单号：201734884477
+                  </div>
+                  <div class="aui-info-item"><span>已完成</span></div>
+              </div>
+            </div>
+            <div class="aui-card-list-content-padded">
+              <div class="aui-media-list-item-inner">
+                  <div class="aui-list-item-media">
+                      <img src="../image/case.png">
+                  </div>
+                  <div class="aui-list-item-inner">
+                      <div class="aui-list-item-text">
+                          <div class="aui-list-item-title aui-ellipsis-1 aui-pull-left">外出度假旅游外出度假旅游外出度假旅游外出度假旅游外出度假旅游外出度假旅游外出度假旅游外出度假旅游</div>
+                          <div class="aui-list-item-right aui-pull-right">￥300.00</div>
+                      </div>
+                      <div class="aui-list-item-text aui-ellipsis-1">
+                         托管人：John Smith
+                      </div>
+                      <div class="aui-list-item-text aui-ellipsis-1">
+                          餐饮：提供三餐条
+                      </div>
+                      <div class="aui-list-item-text aui-ellipsis-1">
+                          开始时间：2017/12/10-12/30
+                      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="aui-card-list-footer">
+                <button class="aui-btn aui-btn-info aui-btn-outlined">我要投诉</button>
+                <button class="aui-btn aui-btn-info">我要评价</button>
+            </div>
+        </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</body>
+<script type="text/javascript" src="../script/api.js"></script>
+<script type="text/javascript" src="../script/aui-tab.js"></script>
+<script type="text/javascript">
+    apiready = function(){
+        api.parseTapmode();
+    };
+    var tab = new auiTab({
+        element:document.getElementById("tab")
+    },function(ret){
+      if(ret.index==1){
+        document.getElementById('auiTab').innerHTML =
+          `
+          <ul class="aui-list aui-media-list">
+            <div class="textLine"></div>
+            <li class="aui-list-item">
+              <div class="aui-card-list">
+                <div class="aui-card-list-header">
+                  <div class="aui-info" style="padding:0">
+                      <div class="aui-info-item">
+                          订单号：201734884477
+                      </div>
+                      <div class="aui-info-item"><span>已完成</span></div>
+                  </div>
+                </div>
+                <div class="aui-card-list-content-padded">
+                  <div class="aui-media-list-item-inner">
+                      <div class="aui-list-item-media">
+                          <img src="../image/case.png">
+                      </div>
+                      <div class="aui-list-item-inner">
+                          <div class="aui-list-item-text">
+                              <div class="aui-list-item-title aui-ellipsis-1 aui-pull-left">外出度假旅游外出度假旅游外出度假旅游外出度假旅游外出度假旅游外出度假旅游外出度假旅游外出度假旅游</div>
+                              <div class="aui-list-item-right aui-pull-right">￥300.00</div>
+                          </div>
+                          <div class="aui-list-item-text aui-ellipsis-1">
+                             托管人：John Smith
+                          </div>
+                          <div class="aui-list-item-text aui-ellipsis-1">
+                              餐饮：提供三餐条
+                          </div>
+                          <div class="aui-list-item-text aui-ellipsis-1">
+                              开始时间：2017/12/10-12/30
+                          </div>
+                      </div>
+                  </div>
+                </div>
+                <div class="aui-card-list-footer">
+                    <button class="aui-btn aui-btn-info aui-btn-outlined">我要投诉</button>
+                    <button class="aui-btn aui-btn-info">我要评价</button>
+                </div>
+            </div>
+            </li>
+          </ul>
+          `;
+      }else if (ret.index==2) {
+        document.getElementById('auiTab').innerHTML = ret.index;
+      }else {
+        document.getElementById('auiTab').innerHTML = ret.index;
+      }
+    });
+    function closeWin(){
+        api.closeWin({
+        });
+    }
+</script>
+</html>
