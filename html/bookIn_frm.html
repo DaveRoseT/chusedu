@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <link rel="stylesheet" type="text/css" href="../css/aui.css" />
+    <link rel="stylesheet" type="text/css" href="../css/csd.css" />
+    <link rel="stylesheet" type="text/css" href="../css/swiper.min.css" />
+    <style media="screen">
+      html,body{
+        height: 100%;
+        background: #fff;
+      }
+      .aui-content{
+        padding: 0 15px;
+      }
+      img{
+        width: 22%;
+        margin: 45px auto 60px auto;
+      }
+      p{
+        padding: 0 15px;
+        text-indent: 1.4rem;
+        font-size: .7rem;
+        margin-bottom: 70px;
+      }
+      .aui-btn-info:active{
+        background: #3f87ff !important;
+        opacity: .8;
+        height: 2rem;
+        line-height: 2rem;
+        border: 1px solid #3f87ff !important;
+      }
+      .aui-btn-block{
+          margin-bottom: 15px;
+          border: 0;
+          background: #3f87ff !important;
+          height: 2rem;
+          line-height: 2rem;
+          font-size: .7rem;
+      }
+      .aui-btn-info.aui-btn-outlined {
+          color: #3f87ff !important;
+          border: 1px solid #3f87ff !important;
+          background: #fff !important;
+      }
+    </style>
+</head>
+<body>
+  <div class="aui-content">
+    <img src="../icon/wancheng.png" alt="">
+    <p>
+      您已完成房源信息的录入,您可以保存已经录入的信息或直接提交审核,如果您还有更多客房
+      可寄宿,请点击"继续添加客房"
+    </p>
+    <button class="aui-btn aui-btn-block aui-btn-info">提交审核</button>
+    <button class="aui-btn aui-btn-block aui-btn-info aui-btn-outlined">继续添加客房</button>
+  </div>
+</body>
+<script type="text/javascript" src="../script/api.js"></script>
+
+<script type="text/javascript">
+  apiready = function(){
+      api.parseTapmode();
+
+  };
+  function closeWin(){
+      api.closeWin({
+      });
+  }
+
+</script>
+</html>
